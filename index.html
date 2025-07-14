@@ -10,12 +10,28 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Oswald', sans-serif;
       background-color: #0b1c2c;
       color: #f0f4f8;
       line-height: 1.6;
+    }
+    nav {
+      background-color: #091622;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: #88c0ff;
+      text-decoration: none;
+      font-weight: bold;
     }
     header {
       background-color: #0b1c2c;
@@ -45,9 +61,9 @@
       color: #88c0ff;
       margin-bottom: 20px;
     }
-    .services p {
-      font-size: 1.2rem;
-      max-width: 800px;
+    .content p {
+      font-size: 1.1rem;
+      max-width: 900px;
       margin: 10px auto;
       color: #e6ecf1;
     }
@@ -71,24 +87,59 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#services">Services</a>
+    <a href="#training">Training</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Security Logo">
     <h1>BRAVADO SECURITY</h1>
     <p>Elite Guarding Solutions for Industrial & Corporate Clients Across Delhi NCR</p>
   </header>
 
-  <section class="services">
-    <h2>Our Services</h2>
-    <p>We specialize in professional security manpower tailored to complex environments and high-risk operations.</p>
-    <p><strong>Manpower Deployment</strong> – Uniformed, trained guards stationed at entry and high-traffic points.</p>
-    <p><strong>Armed Gunmen</strong> – Licensed firearm personnel for maximum protection where it matters most.</p>
-    <p><strong>On-Site Security</strong> – 24/7 coverage with rotating shifts and supervisor oversight.</p>
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="content">
+      <p>Founded by the late <strong>Lt. Col. H.C. Sharma</strong>, Bravado Security & Surveillance is a veteran-led organization carrying forward his legacy of integrity and service. Now managed by his son <strong>Sanjeev Sharma</strong> and <strong>Subedar (Retd.) Kartar Singh</strong>, we deliver disciplined, compliant, and vigilant security solutions to industries, corporations, and sensitive zones across Delhi NCR.</p>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:Bravado745@yahoo.com">Bravado745@yahoo.com</a></p>
-    <a href="mailto:Bravado745@yahoo.com">Request a Callback</a>
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="content">
+      <p><strong>Sanjeev Sharma – Director</strong><br>B.Com, PGDBA. With over 7 years in corporate marketing and 20+ years in security operations, he is a strategic planner and leadership mentor focused on operational excellence and client trust.</p>
+      <p><strong>Subedar (Retd.) Kartar Singh – General Manager</strong><br>Retired Army veteran with vast experience in personnel management, recruitment, fire safety, and field operations.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="content">
+      <p><strong>Manpower Deployment</strong> – Trained guards for static and mobile duties.</p>
+      <p><strong>Armed Gunmen</strong> – Licensed firearm holders for high-risk locations.</p>
+      <p><strong>Industrial & Office Security</strong> – Regular and shift-based operations tailored to client needs.</p>
+    </div>
+  </section>
+
+  <section id="training">
+    <h2>Training & Recruitment</h2>
+    <div class="content">
+      <p>Our security personnel are recruited through a strict screening process including education, age, fitness, police verification, and medical checks. Training is conducted as per PSARA guidelines and includes modules on guarding, first aid, fire safety, self-defense, and customer relations.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="content">
+      <p><strong>Address:</strong> D-20, Sector 7, Noida, Uttar Pradesh – 201301</p>
+      <p><strong>Email:</strong> <a href="mailto:Bravado745@yahoo.com">Bravado745@yahoo.com</a></p>
+      <p><strong>Phone:</strong> +91 99900 92994</p>
+      <a href="mailto:Bravado745@yahoo.com">Request a Callback</a>
+    </div>
   </section>
 
   <footer>
