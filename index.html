@@ -80,6 +80,23 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
+    .client-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .client-grid a img {
+      max-width: 160px;
+      height: auto;
+      opacity: 0.9;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .client-grid a:hover img {
+      transform: scale(1.08);
+      opacity: 1;
+    }
     .contact a {
       display: inline-block;
       margin-top: 20px;
@@ -104,6 +121,7 @@
     <a href="#about">About</a>
     <a href="#team">Team</a>
     <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
     <a href="#training">Training</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -138,6 +156,19 @@
     </div>
     <div class="gallery">
       <img src="IMG_9623.JPG" alt="Security Guard Training Session">
+    </div>
+  </section>
+
+  <section id="clients">
+    <h2>Our Clients</h2>
+    <div class="client-grid">
+      <a href="https://www.adityaauto.com" target="_blank"><img src="Logoaditya.svg" alt="Aditya Auto Industries"></a>
+      <a href="https://www.halonix.co.in" target="_blank"><img src="Logohalonix.png" alt="Halonix Technologies"></a>
+      <a href="https://ramanujancollege.ac.in" target="_blank"><img src="logoramanujancollege.jpeg" alt="Ramanujan College"></a>
+      <a href="https://www.ecoware.in" target="_blank"><img src="LOGOECOWARE.png" alt="Ecoware Solutions"></a>
+      <a href="https://www.syrotech.com" target="_blank"><img src="LOGOSYROTECH.png" alt="GO IP Global Services (Syrotech)"></a>
+      <a href="https://www.akggroupindia.com/contact-us" target="_blank"><img src="logoAKG.jpg" alt="AKG Group"></a>
+      <a href="https://radiantiml.com" target="_blank"><img src="LOGORADIANT.png" alt="Radiant Innovative Mfg Ltd"></a>
     </div>
   </section>
 
