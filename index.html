@@ -14,6 +14,7 @@
       background-color: #fff;
       color: #1a1a1a;
     }
+
     nav {
       background-color: #0b1c2c;
       padding: 12px;
@@ -21,46 +22,104 @@
       justify-content: center;
       gap: 25px;
     }
+
     nav a {
       color: #88c0ff;
       text-decoration: none;
       font-weight: bold;
     }
+
     header {
       position: relative;
       height: 85vh;
       overflow: hidden;
     }
+
     .slideshow {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 1;
     }
+
     .slide {
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       opacity: 0;
       transition: opacity 1.5s ease-in-out;
     }
+
     .slide.show {
       opacity: 0.35;
     }
-    header img {
-      position: relative;
+
+    .logo-overlay {
+      position: absolute;
       z-index: 2;
-      max-width: 320px;
-      height: auto;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      position: absolute;
+      max-width: 320px;
+      height: auto;
     }
-</style>
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0b1c2c;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Testimonials */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .testimonial-card p.quote {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-card p.name {
+      font-weight: bold;
+      color: #0b1c2c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0b1c2c;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
+
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -72,14 +131,15 @@
 
   <header>
     <div class="slideshow">
-      <img src="unnamed.jpg" class="slide show" />
-      <img src="unnamed2.jpg" class="slide" />
-      <img src="unnamed3.jpg" class="slide" />
-      <img src="unnamed4.jpg" class="slide" />
-      <img src="unnamed5.jpg" class="slide" />
+      <div class="slide show" style="background-image: url('unnamed.jpg');"></div>
+      <div class="slide" style="background-image: url('unnamed2.jpg');"></div>
+      <div class="slide" style="background-image: url('unnamed3.jpg');"></div>
+      <div class="slide" style="background-image: url('unnamed4.jpg');"></div>
+      <div class="slide" style="background-image: url('unnamed5.jpg');"></div>
     </div>
-    <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
+    <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" class="logo-overlay" />
   </header>
+
   <section id="about">
     <h2>About Us</h2>
     <div class="content">
@@ -114,30 +174,6 @@
 
   <section id="testimonials">
     <h2>What Clients Say</h2>
-    <style>
-      .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      .testimonial-card {
-        background: #f1f1f1;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        text-align: left;
-      }
-      .testimonial-card p.quote {
-        font-style: italic;
-        margin-bottom: 10px;
-      }
-      .testimonial-card p.name {
-        font-weight: bold;
-        color: #0b1c2c;
-      }
-    </style>
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <p class="quote">“Professional, punctual, and highly reliable. Our facility is secure 24/7 thanks to Bravado.”</p>
@@ -153,6 +189,7 @@
       </div>
     </div>
   </section>
+
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Email:</strong> <a href="mailto:Bravado745@yahoo.com">Bravado745@yahoo.com</a></p>
@@ -164,7 +201,6 @@
     &copy; 2025 Bravado Security and Surveillance. All rights reserved.
   </footer>
 
-  <!-- Swiper JS (for client carousel) -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.mySwiper', {
@@ -182,7 +218,6 @@
     });
   </script>
 
-  <!-- Background slideshow logic -->
   <script>
     const slides = document.querySelectorAll('.slide');
     let current = 0;
@@ -192,6 +227,6 @@
       slides[current].classList.add('show');
     }, 5000);
   </script>
+
 </body>
 </html>
-
