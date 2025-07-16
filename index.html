@@ -37,10 +37,8 @@
 
     .slideshow {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       z-index: 1;
     }
 
@@ -48,75 +46,58 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      object-fit: cover;
+      object-position: center;
       opacity: 0;
       transition: opacity 1.5s ease-in-out;
-    }
-
-    .slide::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-      z-index: 1;
     }
 
     .slide.show {
       opacity: 0.35;
     }
 
-    .logo-overlay {
-      position: absolute;
+    header img[alt="Bravado Logo"] {
+      position: relative;
       z-index: 2;
+      max-width: 320px;
+      height: auto;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 320px;
-      height: auto;
+      position: absolute;
     }
 
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     h2 {
       text-align: center;
+      margin-bottom: 30px;
       color: #0b1c2c;
     }
 
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    /* 🔥 TIP: Set consistent max dimensions for all client logos */
     .swiper-slide img {
       max-height: 80px;
       max-width: 150px;
       object-fit: contain;
-      width: auto;
-      height: auto;
       display: block;
       margin: auto;
-      padding: 10px;
     }
 
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
     .testimonial-card {
       background: #f1f1f1;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: left;
     }
 
@@ -130,11 +111,43 @@
       color: #0b1c2c;
     }
 
+    #contact {
+      background-color: #f7f9fc;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #contact .content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    #contact p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      background: #0b1c2c;
+      background-color: #0b1c2c;
       color: #fff;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #0b1c2c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #14354d;
     }
   </style>
 </head>
@@ -151,13 +164,13 @@
 
   <header>
     <div class="slideshow">
-      <div class="slide show" style="background-image: url('unnamed.jpg');"></div>
-      <div class="slide" style="background-image: url('unnamed2.jpg');"></div>
-      <div class="slide" style="background-image: url('unnamed3.jpg');"></div>
-      <div class="slide" style="background-image: url('unnamed4.jpg');"></div>
-      <div class="slide" style="background-image: url('unnamed5.jpg');"></div>
+      <img src="unnamed.jpg" class="slide show" />
+      <img src="unnamed2.jpg" class="slide" />
+      <img src="unnamed3.jpg" class="slide" />
+      <img src="unnamed4.jpg" class="slide" />
+      <img src="unnamed5.jpg" class="slide" />
     </div>
-    <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" class="logo-overlay" />
+    <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
   </header>
 
   <section id="about">
@@ -211,16 +224,20 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> <a href="mailto:Bravado745@yahoo.com">Bravado745@yahoo.com</a></p>
-    <p><strong>Phone:</strong> +91 99900 92994</p>
-    <p><strong>Address:</strong> D-20, Sector 7, Noida, Uttar Pradesh – 201301</p>
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> <a href="mailto:Bravado745@yahoo.com">Bravado745@yahoo.com</a></p>
+      <p><strong>Phone:</strong> +91 99900 92994</p>
+      <p><strong>Address:</strong> D-20, Sector 7, Noida, Uttar Pradesh – 201301</p>
+      <a href="mailto:Bravado745@yahoo.com" class="cta-btn">Send Inquiry</a>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Bravado Security and Surveillance. All rights reserved.
   </footer>
 
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.mySwiper', {
