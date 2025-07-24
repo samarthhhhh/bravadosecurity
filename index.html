@@ -20,7 +20,6 @@
       background-color: #fff;
       color: #1a1a1a;
     }
-
     nav {
       background-color: #0b1c2c;
       padding: 12px;
@@ -31,26 +30,22 @@
       top: 0;
       z-index: 1000;
     }
-
     nav a {
       color: #88c0ff;
       text-decoration: none;
       font-weight: bold;
     }
-
     header {
       position: relative;
       height: 85vh;
       overflow: hidden;
     }
-
     .slideshow {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
       z-index: 1;
     }
-
     .slide {
       position: absolute;
       width: 100%;
@@ -60,11 +55,9 @@
       opacity: 0;
       transition: opacity 1.5s ease-in-out;
     }
-
     .slide.show {
       opacity: 0.35;
     }
-
     header img[alt="Bravado Logo"] {
       position: relative;
       z-index: 2;
@@ -75,66 +68,32 @@
       transform: translate(-50%, -50%);
       position: absolute;
     }
-
-    .trust-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      background-color: #f1f1f1;
-      padding: 20px 10px;
-      font-weight: 600;
-      font-size: 16px;
-      color: #0b1c2c;
-      text-align: center;
-      border-top: 2px solid #e0e0e0;
-      border-bottom: 2px solid #e0e0e0;
-    }
-
-    .trust-badges span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .trust-badges span img {
-      height: 24px;
-      width: auto;
-      vertical-align: middle;
-    }
-
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
-
     h2 {
       text-align: center;
       margin-bottom: 30px;
       color: #0b1c2c;
     }
-
     .swiper-slide img {
       max-height: 80px;
       max-width: 150px;
       object-fit: contain;
       display: block;
       margin: auto;
-      filter: grayscale(100%);
-      transition: filter 0.3s ease;
+      transition: transform 0.3s ease;
     }
-
     .swiper-slide img:hover {
-      filter: grayscale(0%);
+      transform: scale(1.08);
     }
-
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
-
     .testimonial-card {
       background: #f1f1f1;
       padding: 20px;
@@ -142,40 +101,33 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: left;
     }
-
     .testimonial-card p.quote {
       font-style: italic;
       margin-bottom: 10px;
     }
-
     .testimonial-card p.name {
       font-weight: bold;
       color: #0b1c2c;
     }
-
     #contact {
       background-color: #f7f9fc;
       padding: 60px 20px;
       text-align: center;
     }
-
     #contact .content {
       max-width: 700px;
       margin: 0 auto;
     }
-
     #contact p {
       margin: 10px 0;
       font-size: 18px;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       background-color: #0b1c2c;
       color: #fff;
     }
-
     .cta-btn {
       display: inline-block;
       margin-top: 20px;
@@ -187,7 +139,6 @@
       font-weight: bold;
       transition: background 0.3s;
     }
-
     .cta-btn:hover {
       background-color: #14354d;
     }
@@ -214,15 +165,6 @@
     </div>
     <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
   </header>
-
-  <!-- ✅ Trust Badge Section -->
-  <div class="trust-badges">
-    <span><img src="msme-logo.png" alt="MSME Logo"> MSME Registered</span>
-    <span><img src="psara-logo.jpg" alt="PSARA Logo"> PSARA Certified</span>
-    <span>📄 Govt Verified</span>
-    <span>🏆 100+ Clients</span>
-    <span>👷 500+ Guards Deployed</span>
-  </div>
 
   <section id="about">
     <h2>About Us</h2>
@@ -288,7 +230,6 @@
     &copy; 2025 Bravado Security and Surveillance. All rights reserved.
   </footer>
 
-  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.mySwiper', {
@@ -315,3 +256,4 @@
   </script>
 </body>
 </html>
+
