@@ -88,23 +88,60 @@ nav {
     margin-right: 0;
   }
 
-  .hamburger {
-    display: block;
-  }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 10px 0;
-  }
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #88c0ff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
 
-  .nav-links.show {
-    display: flex;
-  }
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
 
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #0b1c2c;
+}
+
+.nav-links.show {
+  display: flex;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   .nav-links a {
     font-size: 16px;
     padding: 4px 0;
@@ -331,22 +368,23 @@ nav {
 <nav>
   <div class="nav-left">
     <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
-  </div>
-
-  <!-- Hamburger icon -->
-  <div class="hamburger" onclick="toggleMenu()">
-    ☰
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </div>
 
   <div class="nav-links" id="mobileMenu">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#clients">Clients</a>
-    <a href="compliance.html">Compliance</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#clients" onclick="closeMenu()">Clients</a>
+    <a href="compliance.html" onclick="closeMenu()">Compliance</a>
+    <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 </nav>
+
 
   <header>
     <div class="slideshow">
@@ -543,6 +581,22 @@ nav {
     menu.classList.toggle('show');
   }
 </script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.getElementById('hamburger');
+
+    menu.classList.toggle('show');
+    icon.classList.toggle('active');
+  }
+
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('show');
+    document.getElementById('hamburger').classList.remove('active');
+  }
+</script>
+
 
 
 </body>
