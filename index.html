@@ -210,6 +210,43 @@
     .cta-btn:hover {
       background-color: #14354d;
     }
+.trust-combo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #f7f9fc;
+  padding: 30px 20px;
+  border-top: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
+}
+
+.trust-combo span img {
+  height: 60px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+}
+
+.stat-box {
+  min-width: 160px;
+}
+
+.counter {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0b1c2c;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
   </style>
 </head>
 <body>
@@ -233,13 +270,23 @@
     <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
   </header>
 
-  <div class="trust-badges">
-    <span><img src="psara-logo.jpg" alt="PSARA Certified"></span>
-    <span><img src="MSME.jpeg" alt="MSME Registered"></span>
-    <span>100+ Clients</span>
-    <span>500+ Guards Deployed</span>
-    <span>30+ Years of Experience</span>
+ <section class="trust-combo">
+  <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
+  <span><img src="msme-logo.png" alt="MSME Registered" title="MSME Registered"></span>
+
+  <div class="stat-box">
+    <div class="counter" data-target="100">0</div>
+    <p>Trusted Clients</p>
   </div>
+  <div class="stat-box">
+    <div class="counter" data-target="500">0</div>
+    <p>Guards Deployed</p>
+  </div>
+  <div class="stat-box">
+    <div class="counter" data-target="30">0</div>
+    <p>Years of Experience</p>
+  </div>
+</section>
 
 <section id="about">
   <h2>About Us</h2>
@@ -365,6 +412,41 @@
       slides[current].classList.add('show');
     }, 5000);
   </script>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let hasAnimated = false;
+
+  function animateCounters() {
+    if (hasAnimated) return;
+    if (!isInViewport(counters[0])) return;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 40;
+
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCount, 50);
+        } else {
+          counter.innerText = target + '+';
+        }
+      };
+      updateCount();
+    });
+
+    hasAnimated = true;
+  }
+
+  function isInViewport(elem) {
+    const rect = elem.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom >= 0;
+  }
+
+  window.addEventListener('scroll', animateCounters);
+</script>
+
 </body>
 </html>
 
