@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bravado Security and Solutions</title>
+  <meta name="description" content="Bravado Security and Surveillance – PSARA certified, MSME registered provider of trained guards, armed personnel, and industrial security solutions across Delhi NCR.">
+  <meta name="keywords" content="security agency, guards, PSARA, Delhi NCR, industrial security, Bravado">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta name="theme-color" content="#0b1c2c">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -34,6 +35,11 @@
       color: #88c0ff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-decoration: underline;
     }
     header {
       position: relative;
@@ -59,14 +65,18 @@
       opacity: 0.35;
     }
     header img[alt="Bravado Logo"] {
-      position: relative;
-      z-index: 2;
-      max-width: 320px;
-      height: auto;
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      position: absolute;
+      max-width: 320px;
+      height: auto;
+      z-index: 2;
+    }
+    @media (max-width: 500px) {
+      header img[alt="Bravado Logo"] {
+        max-width: 220px;
+      }
     }
     section {
       padding: 60px 20px;
@@ -142,37 +152,35 @@
     .cta-btn:hover {
       background-color: #14354d;
     }
-.trust-badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #0b1c2c;
-  text-align: center;
-  border-top: 2px solid #e0e0e0;
-  border-bottom: 2px solid #e0e0e0;
-}
-.trust-badges span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.trust-badges span img {
-  height: 60px;
-  max-width: 120px;
-  object-fit: contain;
-  vertical-align: middle;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
-}
-
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #0b1c2c;
+      text-align: center;
+      border-top: 2px solid #e0e0e0;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    .trust-badges span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-badges span img {
+      height: 80px;
+      max-width: 160px;
+      object-fit: contain;
+      vertical-align: middle;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+    }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -193,18 +201,21 @@
     <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
   </header>
 
-<div class="trust-badges">
-  <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
-  <span><img src="msme-logo.png" alt="MSME Registered" title="MSME Registered"></span>
-  <span>100+ Clients</span>
-  <span>500+ Guards Deployed</span>
-  <span>30+ Years of Experience</span>
-</div>
+  <div class="trust-badges">
+    <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
+    <span><img src="msme-logo.png" alt="MSME Registered" title="MSME Registered"></span>
+    <span>100+ Clients</span>
+    <span>500+ Guards Deployed</span>
+    <span>30+ Years of Experience</span>
+  </div>
 
   <section id="about">
     <h2>About Us</h2>
     <div class="content">
       <p>Bravado Security & Surveillance was founded by the late <strong>Lt. Col. H.C. Sharma</strong>, a decorated veteran whose values of discipline, courage, and integrity continue to guide our mission. Today, the firm is led by his son <strong>Sanjeev Sharma</strong>, an accomplished security strategist with over 20 years of industry leadership, supported by <strong>Subedar (Retd.) Kartar Singh</strong>. Under their guidance, Bravado provides compliant, vigilant, and scalable security solutions to industries, corporations, and critical infrastructure across Delhi NCR.</p>
+      <div style="text-align:center; margin-top:30px;">
+        <a class="cta-btn" href="#contact">Get a Quote</a>
+      </div>
     </div>
   </section>
 
@@ -214,11 +225,15 @@
       <p><strong>Manpower Deployment</strong> – Trained guards for static and mobile duties.</p>
       <p><strong>Armed Gunmen</strong> – Licensed firearm holders for high-risk locations.</p>
       <p><strong>Industrial & Office Security</strong> – Regular and shift-based operations tailored to client needs.</p>
+      <div style="text-align:center; margin-top:30px;">
+        <a class="cta-btn" href="#contact">Request Personnel</a>
+      </div>
     </div>
   </section>
 
   <section id="clients">
     <h2>Our Clients</h2>
+    <p style="text-align:center; margin-bottom:20px;">Some of our trusted partners:</p>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><a href="https://www.adityaauto.com" target="_blank"><img src="adityalogo.png" alt="Aditya Auto"></a></div>
