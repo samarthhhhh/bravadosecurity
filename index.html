@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bravado Security and Solutions</title>
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<meta name="theme-color" content="#0b1c2c">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#0b1c2c">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <style>
@@ -27,6 +27,9 @@
       display: flex;
       justify-content: center;
       gap: 25px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -73,6 +76,33 @@
       position: absolute;
     }
 
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #0b1c2c;
+      text-align: center;
+      border-top: 2px solid #e0e0e0;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    .trust-badges span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-badges span img {
+      height: 24px;
+      width: auto;
+      vertical-align: middle;
+    }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -91,6 +121,12 @@
       object-fit: contain;
       display: block;
       margin: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .swiper-slide img:hover {
+      filter: grayscale(0%);
     }
 
     .testimonial-grid {
@@ -179,6 +215,15 @@
     <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
   </header>
 
+  <!-- ✅ Trust Badge Section -->
+  <div class="trust-badges">
+    <span><img src="msme-logo.png" alt="MSME Logo"> MSME Registered</span>
+    <span><img src="psara-logo.png" alt="PSARA Logo"> PSARA Certified</span>
+    <span>📄 Govt Verified</span>
+    <span>🏆 100+ Clients</span>
+    <span>👷 500+ Guards Deployed</span>
+  </div>
+
   <section id="about">
     <h2>About Us</h2>
     <div class="content">
@@ -220,7 +265,7 @@
       </div>
       <div class="testimonial-card">
         <p class="quote">“From fire drills to perimeter checks, their team is sharp and responsive.”</p>
-        <p class="name">– Principle, Ramanujan College</p>
+        <p class="name">– Principal, Ramanujan College</p>
       </div>
       <div class="testimonial-card">
         <p class="quote">“Quick deployment, disciplined guards, and consistent reporting. Bravado has been a strong partner.”</p>
@@ -268,6 +313,5 @@
       slides[current].classList.add('show');
     }, 5000);
   </script>
-
 </body>
 </html>
