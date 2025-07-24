@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,527 +12,29 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta name="theme-color" content="#0b1c2c">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-  <style>
-  body {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #1a1a1a;
-}
-h1, h2, h3, .nav-links a {
-  font-family: 'Oswald', sans-serif;
-  color: #0b1c2c;
-}
-
-h2 {
-  font-size: clamp(26px, 4vw, 34px);
-  margin-bottom: 20px;
-}
-
-nav {
-  background-color: #0b1c2c;
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo {
-  height: 50px;
-  max-width: 160px;
-  margin-right: 20px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: #88c0ff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  color: #88c0ff;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 10px;
-  }
-
-  .nav-left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-logo {
-    height: 40px;
-    margin-right: 0;
-  }
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.hamburger .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #88c0ff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(6px);
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-6px);
-}
-
-.nav-links {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #0b1c2c;
-}
-
-.nav-links.show {
-  display: flex;
-  animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-  .nav-links a {
-    font-size: 16px;
-    padding: 4px 0;
-  }
-}
-    header {
-      position: relative;
-      height: 85vh;
-      overflow: hidden;
-    }
-    .slideshow {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: 1;
-    }
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-    }
-    .slide.show {
-      opacity: 0.35;
-    }
-    header img[alt="Bravado Logo"] {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 320px;
-      height: auto;
-      z-index: 2;
-    }
-    @media (max-width: 500px) {
-      header img[alt="Bravado Logo"] {
-        max-width: 220px;
-      }
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #0b1c2c;
-    }
-    .trust-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      background-color: #f1f1f1;
-      padding: 20px 10px;
-      font-weight: 600;
-      font-size: 16px;
-      color: #0b1c2c;
-      text-align: center;
-      border-top: 2px solid #e0e0e0;
-      border-bottom: 2px solid #e0e0e0;
-    }
-    .trust-badges span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .trust-badges span img {
-      height: 60px;
-      max-width: 120px;
-      object-fit: contain;
-      vertical-align: middle;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
-    }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .service-card {
-      background: #f1f1f1;
-      border-radius: 12px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, background 0.3s, color 0.3s;
-      color: #1a1a1a;
-    }
-    .service-card:hover {
-      background: linear-gradient(135deg, #07c, #004080);
-      color: #fff;
-    }
-    .service-card svg {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 15px;
-      fill: currentColor;
-    }
-    .service-card h3 {
-      margin: 10px 0 5px;
-      font-size: 20px;
-    }
-    .service-card p {
-      font-size: 15px;
-      line-height: 1.4;
-    }
-   
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-  height: auto !important;
-  box-sizing: border-box;
-}
-
-#clients .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  min-height: 90px;
-  box-sizing: border-box;
-}
-
-#clients .swiper-slide img {
-  max-height: 70px;
-  max-width: 150px;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
-}
-
-#clients .swiper-slide img:hover {
-  transform: scale(1.08);
-}
-
-   
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .testimonial-card {
-      background: #f1f1f1;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: left;
-    }
-    .testimonial-card p.quote {
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-    .testimonial-card p.name {
-      font-weight: bold;
-      color: #0b1c2c;
-    }
-    #contact {
-      background-color: #f7f9fc;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    #contact .content {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    #contact p {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0b1c2c;
-      color: #fff;
-    }
-    .cta-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #0b1c2c;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .cta-btn:hover {
-      background-color: #14354d;
-    }
-.trust-combo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  background: #f7f9fc;
-  padding: 30px 20px;
-  border-top: 2px solid #e0e0e0;
-  border-bottom: 2px solid #e0e0e0;
-  text-align: center;
-}
-
-.trust-combo span img {
-  height: 60px;
-  max-width: 120px;
-  object-fit: contain;
-  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
-}
-
-.about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-.about-image {
-  flex: 1;
-  min-width: 280px;
-  max-width: 500px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.about-content {
-  flex: 2;
-  min-width: 300px;
-}
-
-.about-content p {
-  margin-bottom: 16px;
-  color: #333;
-}
-
-
-.stat-box {
-  min-width: 160px;
-}
-
-.counter {
-  font-size: 36px;
-  font-weight: bold;
-  color: #0b1c2c;
-}
-
-.stat-box p {
-  font-size: 16px;
-  color: #333;
-  font-weight: 500;
-  margin-top: 6px;
-}
-.service-card img.service-icon {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-.service-card h3 {
-  margin-top: 16px;
-}
-
-.service-card:hover img.service-icon {
-  transform: scale(1.05);
-}
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .about-content {
-    order: 1;
-    width: 100%;
-  }
-
-  .about-image {
-    order: 2;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  #about h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 480px) {
-  .swiper-slide img {
-    max-width: 110px;
-    max-height: 60px;
-  }
-
-  .service-card img.service-icon {
-    width: 56px;
-  }
-}
-#clients .swiper {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  height: auto !important;
-}
-
-#clients .swiper-wrapper {
-  align-items: center;
-}
-
-#testimonials {
-  margin-top: 0 !important;
-  padding-top: 30px;
-}
-#clients {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-#clients .swiper,
-#clients .swiper-wrapper {
-  height: auto !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-#testimonials {
-  margin-top: 0 !important;
-  padding-top: 20px !important;
-}
-
-
-
-
-
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-  <div class="nav-left">
-    <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </div>
-  </div>
+    <div class="nav-links" id="mobileMenu">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="why.html" onclick="closeMenu()">Why Us</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+  </nav>
 
-<div class="nav-links" id="mobileMenu">
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="why.html" onclick="closeMenu()">Why Us</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
-</div>
-</nav>
-
-
+  <!-- Hero / Slideshow -->
   <header>
     <div class="slideshow">
       <img src="unnamed.jpg" class="slide show" />
@@ -543,78 +46,77 @@ nav {
     <img src="logo.png" alt="Bravado Logo" />
   </header>
 
-<section id="stats" class="trust-combo">
-  <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
-  <span><img src="MSME.jpeg" alt="MSME Registered" title="MSME Registered"></span>
-
-  <div class="stat-box">
-    <div class="counter" data-target="100">0</div>
-    <p>Trusted Clients</p>
-  </div>
-  <div class="stat-box">
-    <div class="counter" data-target="500">0</div>
-    <p>Guards Deployed</p>
-  </div>
-  <div class="stat-box">
-    <div class="counter" data-target="30">0</div>
-    <p>Years of Experience</p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="about-wrapper">
-
-    <div class="about-image">
-      <img src="founder.jpeg" alt="Lt. Col. H.C. Sharma" />
+  <!-- Stats + Badges -->
+  <section id="stats" class="trust-combo">
+    <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
+    <span><img src="MSME.jpeg" alt="MSME Registered" title="MSME Registered"></span>
+    <div class="stat-box">
+      <div class="counter" data-target="100">0</div>
+      <p>Trusted Clients</p>
     </div>
+    <div class="stat-box">
+      <div class="counter" data-target="500">0</div>
+      <p>Guards Deployed</p>
+    </div>
+    <div class="stat-box">
+      <div class="counter" data-target="30">0</div>
+      <p>Years of Experience</p>
+    </div>
+  </section>
 
-   <div class="about-content">
-  <h2 style="color: #0b1c2c; margin-bottom: 20px;">Our Legacy & Mission</h2>
-  <p><strong>Bravado Security & Solutions</strong> was founded by the late <strong>Lt. Col. H.C. Sharma</strong>, a decorated Army veteran known for his unwavering discipline, leadership, and service to the nation.</p>
-  <p>Today, his legacy continues under the leadership of his son <strong>Sanjeev Sharma</strong>, a security strategist with 20+ years of experience, alongside <strong>Subedar (Retd.) Kartar Singh</strong>.</p>
-  <p>Together, they lead a team committed to delivering ethical, vigilant, and compliant security services across Delhi NCR for corporates, industries, and high-security zones.</p>
-</div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-wrapper">
+      <div class="about-image">
+        <img src="founder.jpeg" alt="Lt. Col. H.C. Sharma" />
+      </div>
+      <div class="about-content">
+        <h2>Our Legacy & Mission</h2>
+        <p><strong>Bravado Security & Solutions</strong> was founded by the late <strong>Lt. Col. H.C. Sharma</strong>, a decorated Army veteran known for his unwavering discipline, leadership, and service to the nation.</p>
+        <p>Today, his legacy continues under the leadership of his son <strong>Sanjeev Sharma</strong>, a security strategist with 20+ years of experience, alongside <strong>Subedar (Retd.) Kartar Singh</strong>.</p>
+        <p>Together, they lead a team committed to delivering ethical, vigilant, and compliant security services across Delhi NCR for corporates, industries, and high-security zones.</p>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Security Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="security-guard.png" class="service-icon" alt="Security Guard Icon" />
+        <h3>Security Guard</h3>
+        <p>Trained personnel to protect property, people, and assets.</p>
+      </div>
+      <div class="service-card">
+        <img src="security-supervisor.png" class="service-icon" alt="Security Supervisor Icon" />
+        <h3>Security Supervisor</h3>
+        <p>Oversees security staff & responds to incidents promptly.</p>
+      </div>
+      <div class="service-card">
+        <img src="armed-pso.png" class="service-icon" alt="Armed PSO Icon" />
+        <h3>Armed PSO</h3>
+        <p>Close-protection for VIPs and high-risk individuals.</p>
+      </div>
+      <div class="service-card">
+        <img src="surveillance-room.png" class="service-icon" alt="Surveillance Room Icon" />
+        <h3>Surveillance Room</h3>
+        <p>24/7 CCTV monitoring and incident response coordination.</p>
+      </div>
+      <div class="service-card">
+        <img src="gunman.png" class="service-icon" alt="Gunman Icon" />
+        <h3>Gunman</h3>
+        <p>Armed personnel for high-risk environments and protection.</p>
+      </div>
+      <div class="service-card">
+        <img src="fire-safety-expert.png" class="service-icon" alt="Fire Safety Expert Icon" />
+        <h3>Fire Safety Expert</h3>
+        <p>Prevention, detection & response to fire hazards.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="services">
-<h2>Our Security Services</h2>
-  <div class="service-grid">
-    <div class="service-card">
-      <img src="security-guard.png" alt="Security Guard Icon" class="service-icon" />
-      <h3>Security Guard</h3>
-      <p>Trained personnel to protect property, people, and assets.</p>
-    </div>
-    <div class="service-card">
-      <img src="security-supervisor.png" alt="Security Supervisor Icon" class="service-icon" />
-      <h3>Security Supervisor</h3>
-      <p>Oversees security staff & responds to incidents promptly.</p>
-    </div>
-    <div class="service-card">
-      <img src="armed-pso.png" alt="Armed PSO Icon" class="service-icon" />
-      <h3>Armed PSO</h3>
-      <p>Close-protection for VIPs and high-risk individuals.</p>
-    </div>
-    <div class="service-card">
-      <img src="surveillance-room.png" alt="Surveillance Room Icon" class="service-icon" />
-      <h3>Surveillance Room</h3>
-      <p>24/7 CCTV monitoring and incident response coordination.</p>
-    </div>
-    <div class="service-card">
-      <img src="gunman.png" alt="Gunman Icon" class="service-icon" />
-      <h3>Gunman</h3>
-      <p>Armed personnel for high-risk environments and protection.</p>
-    </div>
-    <div class="service-card">
-      <img src="fire-safety-expert.png" alt="Fire Safety Expert Icon" class="service-icon" />
-      <h3>Fire Safety Expert</h3>
-      <p>Prevention, detection & response to fire hazards.</p>
-    </div>
-  </div>
-</section>
-
-
+  <!-- Clients Carousel -->
   <section id="clients">
     <h2>Our Clients</h2>
     <div class="swiper mySwiper">
@@ -631,6 +133,7 @@ nav {
     </div>
   </section>
 
+  <!-- Testimonials -->
   <section id="testimonials">
     <h2>What Clients Say</h2>
     <div class="testimonial-grid">
@@ -649,6 +152,7 @@ nav {
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <div class="content">
       <h2>Contact Us</h2>
@@ -659,10 +163,12 @@ nav {
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Bravado Security and Solutions. All rights reserved.
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.mySwiper', {
@@ -686,60 +192,53 @@ nav {
       current = (current + 1) % slides.length;
       slides[current].classList.add('show');
     }, 5000);
+
+    const counters = document.querySelectorAll('.counter');
+    let hasAnimated = false;
+
+    function animateCounters() {
+      if (hasAnimated) return;
+      if (!isInViewport(counters[0])) return;
+
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText;
+          const increment = target / 40;
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCount, 50);
+          } else {
+            counter.innerText = target + '+';
+          }
+        };
+        updateCount();
+      });
+
+      hasAnimated = true;
+    }
+
+    function isInViewport(elem) {
+      const rect = elem.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom >= 0;
+    }
+
+    window.addEventListener('scroll', animateCounters);
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('hamburger');
+
+      menu.classList.toggle('show');
+      icon.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('show');
+      document.getElementById('hamburger').classList.remove('active');
+    }
   </script>
-<script>
-  const counters = document.querySelectorAll('.counter');
-  let hasAnimated = false;
-
-  function animateCounters() {
-    if (hasAnimated) return;
-    if (!isInViewport(counters[0])) return;
-
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
-        const increment = target / 40;
-
-        if (current < target) {
-          counter.innerText = Math.ceil(current + increment);
-          setTimeout(updateCount, 50);
-        } else {
-          counter.innerText = target + '+';
-        }
-      };
-      updateCount();
-    });
-
-    hasAnimated = true;
-  }
-
-  function isInViewport(elem) {
-    const rect = elem.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom >= 0;
-  }
-
-  window.addEventListener('scroll', animateCounters);
-</script>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    const icon = document.getElementById('hamburger');
-
-    menu.classList.toggle('show');
-    icon.classList.toggle('active');
-  }
-
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('show');
-    document.getElementById('hamburger').classList.remove('active');
-  }
-</script>
-
-
-
-
 </body>
 </html>
 
