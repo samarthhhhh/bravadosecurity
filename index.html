@@ -88,6 +88,64 @@
       margin-bottom: 30px;
       color: #0b1c2c;
     }
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #0b1c2c;
+      text-align: center;
+      border-top: 2px solid #e0e0e0;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    .trust-badges span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-badges span img {
+      height: 60px;
+      max-width: 120px;
+      object-fit: contain;
+      vertical-align: middle;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: #f1f1f1;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, background 0.3s, color 0.3s;
+      color: #1a1a1a;
+    }
+    .service-card:hover {
+      background: linear-gradient(135deg, #07c, #004080);
+      color: #fff;
+    }
+    .service-card svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+      fill: currentColor;
+    }
+    .service-card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+    .service-card p {
+      font-size: 15px;
+      line-height: 1.4;
+    }
     .swiper-slide img {
       max-height: 80px;
       max-width: 150px;
@@ -152,76 +210,41 @@
     .cta-btn:hover {
       background-color: #14354d;
     }
-    .trust-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      background-color: #f1f1f1;
-      padding: 20px 10px;
-      font-weight: 600;
-      font-size: 16px;
-      color: #0b1c2c;
-      text-align: center;
-      border-top: 2px solid #e0e0e0;
-      border-bottom: 2px solid #e0e0e0;
-    }
-    .trust-badges span {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .trust-badges span img {
-      height: 80px;
-      max-width: 160px;
-      object-fit: contain;
-      vertical-align: middle;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .service-card {
-      background: #f1f1f1;
-      border-radius: 12px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    }
-    .service-card.highlight {
-      background: linear-gradient(135deg, #07c, #004080);
-      color: #fff;
-    }
-    .service-card svg {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 15px;
-      fill: currentColor;
-    }
-    .service-card h3 {
-      margin: 10px 0 5px;
-      font-size: 20px;
-    }
-    .service-card p {
-      font-size: 15px;
-      line-height: 1.4;
-    }
   </style>
 </head>
 <body>
-  <!-- ... NAV + HEADER OMITTED ... -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="compliance.html">Compliance</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <div class="slideshow">
+      <img src="unnamed.jpg" class="slide show" />
+      <img src="unnamed2.jpg" class="slide" />
+      <img src="unnamed3.jpg" class="slide" />
+      <img src="unnamed4.jpg" class="slide" />
+      <img src="unnamed5.jpg" class="slide" />
+    </div>
+    <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
+  </header>
+
+  <div class="trust-badges">
+    <span><img src="psara-logo.jpg" alt="PSARA Certified"></span>
+    <span><img src="msme-logo.png" alt="MSME Registered"></span>
+    <span>100+ Clients</span>
+    <span>500+ Guards Deployed</span>
+    <span>30+ Years of Experience</span>
+  </div>
+
   <section id="services">
     <h2>Our <span style="color: #f4c542">Security</span> Services</h2>
     <div class="service-grid">
-      <div class="service-card highlight">
+      <div class="service-card">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 1 6 6v1h-2V8a4 4 0 0 0-8 0v1H6V8a6 6 0 0 1 6-6zM6 10h12v12H6V10z"/></svg>
         <h3>Security Guard</h3>
         <p>Trained personnel to protect property, people, and assets.</p>
@@ -238,8 +261,8 @@
       </div>
       <div class="service-card">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
-        <h3>Bouncer</h3>
-        <p>Manages crowds at events, clubs, and critical access points.</p>
+        <h3>Surveillance Room</h3>
+        <p>24/7 CCTV monitoring and incident response coordination.</p>
       </div>
       <div class="service-card">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l4 8H8l4-8zm0 20a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
