@@ -246,6 +246,15 @@
   font-weight: 500;
   margin-top: 6px;
 }
+.service-card img.service-icon {
+  width: 60px;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+.service-card:hover img.service-icon {
+  transform: scale(1.05);
+}
 
   </style>
 </head>
@@ -303,41 +312,42 @@
   </div>
 </section>
 
-  <section id="services">
-    <h2>Our Security Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 1 6 6v1h-2V8a4 4 0 0 0-8 0v1H6V8a6 6 0 0 1 6-6zM6 10h12v12H6V10z"/></svg>
-        <h3>Security Guard</h3>
-        <p>Trained personnel to protect property, people, and assets.</p>
-      </div>
-      <div class="service-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l4 4h-3v6h-2V6H8l4-4zM4 18h16v2H4v-2z"/></svg>
-        <h3>Security Supervisor</h3>
-        <p>Oversees security staff & responds to incidents promptly.</p>
-      </div>
-      <div class="service-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12l5 5L20 4"/></svg>
-        <h3>Armed PSO</h3>
-        <p>Close-protection for VIPs and high-risk individuals.</p>
-      </div>
-      <div class="service-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
-        <h3>Surveillance Room</h3>
-        <p>24/7 CCTV monitoring and incident response coordination.</p>
-      </div>
-      <div class="service-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l4 8H8l4-8zm0 20a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
-        <h3>Gunman</h3>
-        <p>Armed personnel for high-risk environments and protection.</p>
-      </div>
-      <div class="service-card">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v2H3zm3 4h12v2H6zm-3 4h18v2H3zm3 4h12v2H6zm-3 4h18v2H3z"/></svg>
-        <h3>Fire Safety Expert</h3>
-        <p>Prevention, detection & response to fire hazards.</p>
-      </div>
+<section id="services">
+  <h2>Our <span style="color: #f4c542">Security</span> Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="security-guard.png" alt="Security Guard Icon" class="service-icon" />
+      <h3>Security Guard</h3>
+      <p>Trained personnel to protect property, people, and assets.</p>
     </div>
-  </section>
+    <div class="service-card">
+      <img src="security-supervisor.png" alt="Security Supervisor Icon" class="service-icon" />
+      <h3>Security Supervisor</h3>
+      <p>Oversees security staff & responds to incidents promptly.</p>
+    </div>
+    <div class="service-card">
+      <img src="armed-pso.png" alt="Armed PSO Icon" class="service-icon" />
+      <h3>Armed PSO</h3>
+      <p>Close-protection for VIPs and high-risk individuals.</p>
+    </div>
+    <div class="service-card">
+      <img src="surveillance-room.png" alt="Surveillance Room Icon" class="service-icon" />
+      <h3>Surveillance Room</h3>
+      <p>24/7 CCTV monitoring and incident response coordination.</p>
+    </div>
+    <div class="service-card">
+      <img src="gunman.png" alt="Gunman Icon" class="service-icon" />
+      <h3>Gunman</h3>
+      <p>Armed personnel for high-risk environments and protection.</p>
+    </div>
+    <div class="service-card">
+      <img src="fire-safety-expert.png" alt="Fire Safety Expert Icon" class="service-icon" />
+      <h3>Fire Safety Expert</h3>
+      <p>Prevention, detection & response to fire hazards.</p>
+    </div>
+  </div>
+</section>
+
 
   <section id="clients">
     <h2>Our Clients</h2>
