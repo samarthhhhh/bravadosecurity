@@ -11,16 +11,29 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta name="theme-color" content="#0b1c2c">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
   <style>
-    body {
-      font-family: 'Oswald', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #1a1a1a;
-    }
+  body {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #1a1a1a;
+}
+h1, h2, h3, .nav-links a {
+  font-family: 'Oswald', sans-serif;
+  color: #0b1c2c;
+}
+
+h2 {
+  font-size: clamp(26px, 4vw, 34px);
+  margin-bottom: 20px;
+}
+
 nav {
   background-color: #0b1c2c;
   padding: 12px 20px;
@@ -335,6 +348,40 @@ nav {
   object-fit: contain;
   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
 }
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-content p {
+  margin-bottom: 16px;
+  color: #333;
+}
+
 
 .stat-box {
   min-width: 160px;
