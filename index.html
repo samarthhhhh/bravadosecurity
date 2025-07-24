@@ -178,55 +178,78 @@
       vertical-align: middle;
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
     }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: #f1f1f1;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .service-card.highlight {
+      background: linear-gradient(135deg, #07c, #004080);
+      color: #fff;
+    }
+    .service-card svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+      fill: currentColor;
+    }
+    .service-card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+    .service-card p {
+      font-size: 15px;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#clients">Clients</a>
-    <a href="compliance.html">Compliance</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header>
-    <div class="slideshow">
-      <img src="unnamed.jpg" class="slide show" />
-      <img src="unnamed2.jpg" class="slide" />
-      <img src="unnamed3.jpg" class="slide" />
-      <img src="unnamed4.jpg" class="slide" />
-      <img src="unnamed5.jpg" class="slide" />
-    </div>
-    <img src="20250712_1329_Bold Security Logo_simple_compose_01jzyt93jyf9h962mkjt2t5231.png" alt="Bravado Logo" />
-  </header>
-
-  <div class="trust-badges">
-    <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
-    <span><img src="msme-logo.png" alt="MSME Registered" title="MSME Registered"></span>
-    <span>100+ Clients</span>
-    <span>500+ Guards Deployed</span>
-    <span>30+ Years of Experience</span>
-  </div>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <div class="content">
-      <p>Bravado Security & Surveillance was founded by the late <strong>Lt. Col. H.C. Sharma</strong>, a decorated veteran whose values of discipline, courage, and integrity continue to guide our mission. Today, the firm is led by his son <strong>Sanjeev Sharma</strong>, an accomplished security strategist with over 20 years of industry leadership, supported by <strong>Subedar (Retd.) Kartar Singh</strong>. Under their guidance, Bravado provides compliant, vigilant, and scalable security solutions to industries, corporations, and critical infrastructure across Delhi NCR.</p>
-      <div style="text-align:center; margin-top:30px;">
-        <a class="cta-btn" href="#contact">Get a Quote</a>
-      </div>
-    </div>
-  </section>
-
+  <!-- ... NAV + HEADER OMITTED ... -->
   <section id="services">
-    <h2>Our Services</h2>
-    <div class="content">
-      <p><strong>Manpower Deployment</strong> – Trained guards for static and mobile duties.</p>
-      <p><strong>Armed Gunmen</strong> – Licensed firearm holders for high-risk locations.</p>
-      <p><strong>Industrial & Office Security</strong> – Regular and shift-based operations tailored to client needs.</p>
-      <div style="text-align:center; margin-top:30px;">
-        <a class="cta-btn" href="#contact">Request Personnel</a>
+    <h2>Our <span style="color: #f4c542">Security</span> Services</h2>
+    <div class="service-grid">
+      <div class="service-card highlight">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 1 6 6v1h-2V8a4 4 0 0 0-8 0v1H6V8a6 6 0 0 1 6-6zM6 10h12v12H6V10z"/></svg>
+        <h3>Security Guard</h3>
+        <p>Trained personnel to protect property, people, and assets.</p>
+      </div>
+      <div class="service-card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l4 4h-3v6h-2V6H8l4-4zM4 18h16v2H4v-2z"/></svg>
+        <h3>Security Supervisor</h3>
+        <p>Oversees security staff & responds to incidents promptly.</p>
+      </div>
+      <div class="service-card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12l5 5L20 4"/></svg>
+        <h3>Armed PSO</h3>
+        <p>Close-protection for VIPs and high-risk individuals.</p>
+      </div>
+      <div class="service-card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+        <h3>Bouncer</h3>
+        <p>Manages crowds at events, clubs, and critical access points.</p>
+      </div>
+      <div class="service-card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l4 8H8l4-8zm0 20a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+        <h3>Gunman</h3>
+        <p>Armed personnel for high-risk environments and protection.</p>
+      </div>
+      <div class="service-card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v2H3zm3 4h12v2H6zm-3 4h18v2H3zm3 4h12v2H6zm-3 4h18v2H3z"/></svg>
+        <h3>Fire Safety Expert</h3>
+        <p>Prevention, detection & response to fire hazards.</p>
       </div>
     </div>
   </section>
