@@ -438,6 +438,12 @@ nav {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 480px) {
+  .swiper-slide img {
+    max-width: 110px;
+    max-height: 60px;
+  }
+}
 
   </style>
 </head>
@@ -492,8 +498,8 @@ nav {
   </div>
 </section>
 
-<section id="about" style="background-color: #f7f9fc;">
-  <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center; max-width: 1200px; margin: auto; padding: 60px 20px;">
+<section id="about">
+  <div class="about-wrapper">
     
     <div style="flex: 1; min-width: 280px; max-width: 500px;">
       <img src="founder.jpeg" alt="Lt. Col. H.C. Sharma" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
@@ -604,7 +610,7 @@ nav {
         disableOnInteraction: false,
       },
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 16,
       breakpoints: {
         640: { slidesPerView: 2 },
         1024: { slidesPerView: 4 }
@@ -652,13 +658,6 @@ nav {
   }
 
   window.addEventListener('scroll', animateCounters);
-</script>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('show');
-  }
 </script>
 
 <script>
