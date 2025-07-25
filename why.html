@@ -2,42 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Why Choose Us – Bravado Security</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #fff;
       color: #1a1a1a;
-    }
-    nav {
-      background-color: #0b1c2c;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .nav-logo {
-      height: 50px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links a {
-      color: #88c0ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .nav-links a:hover {
-      color: #ffffff;
     }
     header {
       text-align: center;
@@ -47,37 +20,51 @@
       font-family: 'Oswald', sans-serif;
       font-size: clamp(32px, 5vw, 42px);
       color: #0b1c2c;
-      margin-bottom: 10px;
     }
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
+      align-items: center;
     }
-    .why-card {
-      background: #f1f1f1;
-      border-radius: 12px;
-      padding: 24px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    .why-block {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
     }
-    .why-card img {
+    .why-block img {
       width: 100%;
-      max-height: 200px;
+      max-width: 400px;
+      border-radius: 12px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .why-card h3 {
-      color: #0b1c2c;
-      margin-bottom: 10px;
+    .why-text h3 {
       font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #0b1c2c;
     }
-    .why-card p {
-      font-size: 15px;
+    .why-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+      .why-block {
+        flex-direction: column;
+        text-align: center;
+      }
+      .why-block img {
+        max-width: 100%;
+      }
     }
     footer {
       text-align: center;
@@ -88,56 +75,51 @@
   </style>
 </head>
 <body>
-  <nav>
-    <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
-    <div class="nav-links">
-      <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
-      <a href="why.html">Why Us</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </nav>
 
   <header>
     <h1>Why Choose Bravado</h1>
   </header>
 
   <section class="why-grid">
-    <div class="why-card">
-      <img src="guard1.jpg" alt="Veteran-Led Team">
-      <h3>Veteran-Led Team</h3>
-      <p>Founded by Army veteran Lt. Col. H.C. Sharma. Led by experienced professionals with real-world security backgrounds.</p>
+
+    <div class="why-block">
+      <img src="guard3.jpg" alt="Supervisor in charge">
+      <div class="why-text">
+        <h3>Experienced Supervision</h3>
+        <p>Our supervisory staff ensures every deployment runs smoothly, backed by real-time coordination and ground-level control.</p>
+      </div>
     </div>
-    <div class="why-card">
-      <img src="guard2.jpg" alt="Certified & Compliant">
-      <h3>Certified & Compliant</h3>
-      <p>PSARA certified in Delhi & Uttar Pradesh. PF, ESIC, GST, and Udyam registered. Transparent legal compliance.</p>
+
+    <div class="why-block">
+      <img src="guard4.jpg" alt="Client-facing duties">
+      <div class="why-text">
+        <h3>Client-Facing Reliability</h3>
+        <p>Bravado guards are trained to interact professionally with clients, residents, and visitors — representing your organization with discipline and courtesy.</p>
+      </div>
     </div>
-    <div class="why-card">
-      <img src="guard3.jpg" alt="24/7 Deployment">
-      <h3>24/7 Deployment</h3>
-      <p>Rapid deployment of trained guards for emergencies or round-the-clock coverage as per your needs.</p>
+
+    <div class="why-block">
+      <img src="guard5.jpg" alt="Indoor monitoring">
+      <div class="why-text">
+        <h3>Smart Indoor Security</h3>
+        <p>Our guards manage reception zones, monitor access control systems, and handle internal threats with discretion and readiness.</p>
+      </div>
     </div>
-    <div class="why-card">
-      <img src="guard4.jpg" alt="Trusted Across Industries">
-      <h3>Trusted Across Industries</h3>
-      <p>We serve manufacturing plants, educational campuses, logistics hubs, retail outlets, and more.</p>
+
+    <div class="why-block">
+      <img src="guard6.JPG" alt="Bravado Security Team">
+      <div class="why-text">
+        <h3>Strong Team Presence</h3>
+        <p>With a trained and responsive team, we ensure consistent guard rotation, backup personnel, and 24/7 availability — no gaps, no excuses.</p>
+      </div>
     </div>
-    <div class="why-card">
-      <img src="guard5.jpg" alt="Trained Professionals">
-      <h3>Trained Professionals</h3>
-      <p>Our personnel are vetted, uniformed, and trained in SOPs, patrols, visitor handling, and emergency procedures.</p>
-    </div>
-    <div class="why-card">
-      <img src="guard6.JPG" alt="Tech-Driven Approach">
-      <h3>Tech-Driven Approach</h3>
-      <p>Use of surveillance systems, digital patrol logs, and reporting tools for real-time tracking and transparency.</p>
-    </div>
+
   </section>
 
   <footer>
     &copy; 2025 Bravado Security and Solutions. All rights reserved.
   </footer>
+
 </body>
 </html>
 
