@@ -4,149 +4,140 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why Choose Us – Bravado Security</title>
-  <meta name="description" content="Why Bravado Security is the trusted choice for industrial, corporate, and residential protection in Delhi NCR.">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #1a1a1a;
       margin: 0;
-      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
     }
-
-    h1, h2 {
-      font-family: 'Oswald', sans-serif;
-      color: #0b1c2c;
+    nav {
+      background-color: #0b1c2c;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-logo {
+      height: 50px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: #88c0ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+    header {
       text-align: center;
+      padding: 60px 20px 30px;
     }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+    header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(32px, 5vw, 42px);
+      color: #0b1c2c;
+      margin-bottom: 10px;
     }
-
-    .cards {
+    .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      margin-top: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    .card {
+    .why-card {
       background: #f1f1f1;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.3s;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card img {
+    .why-card img {
       width: 100%;
-      height: 180px;
+      max-height: 200px;
       object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 16px;
     }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-content h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    .why-card h3 {
       color: #0b1c2c;
+      margin-bottom: 10px;
+      font-family: 'Oswald', sans-serif;
     }
-
-    .card-content p {
+    .why-card p {
       font-size: 15px;
-      line-height: 1.5;
     }
-
     footer {
       text-align: center;
-      padding: 30px 20px;
-      background: #0b1c2c;
+      padding: 20px;
+      background-color: #0b1c2c;
       color: #fff;
-    }
-
-    @media (max-width: 480px) {
-      .card img {
-        height: 150px;
-      }
     }
   </style>
 </head>
 <body>
-
-  <section class="section">
-    <h1>Why Choose Bravado</h1>
-
-    <div class="cards">
-
-      <div class="card">
-        <img src="guard1.jpg" alt="24/7 Support Team">
-        <div class="card-content">
-          <h3>24/7 Support</h3>
-          <p>We operate around the clock, ensuring rapid response and constant availability for emergencies or deployments.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="guard2.jpg" alt="Expert Team">
-        <div class="card-content">
-          <h3>Veteran Leadership</h3>
-          <p>Led by ex-Army officers with real-world security experience, we bring discipline, foresight, and strategic clarity to every engagement.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="guard3.jpg" alt="Certified Guards">
-        <div class="card-content">
-          <h3>Verified & Compliant</h3>
-          <p>PSARA Certified in Delhi & UP. Every guard is trained, verified, and backed by insurance, PF, and ESI coverage.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="guard4.jpg" alt="Technology Driven">
-        <div class="card-content">
-          <h3>Systems & Technology</h3>
-          <p>We use surveillance systems, digital logs, and mobile reporting tools to ensure transparency, control, and fast action.</p>
-        </div>
-      </div>
-
+  <nav>
+    <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="why.html">Why Us</a>
+      <a href="index.html#contact">Contact</a>
     </div>
-  </section>
+  </nav>
 
-  <section class="section">
-    <h2>Industries We Serve</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="guard5.jpg" alt="Manufacturing & Industrial">
-        <div class="card-content">
-          <h3>Manufacturing & Warehousing</h3>
-          <p>Security solutions for plants, godowns, logistics yards, and heavy machinery zones.</p>
-        </div>
-      </div>
+  <header>
+    <h1>Why Choose Bravado</h1>
+  </header>
 
-      <div class="card">
-        <img src="guard6.JPG" alt="Educational & Retail">
-        <div class="card-content">
-          <h3>Institutions & Corporate</h3>
-          <p>Experienced staff for schools, universities, business parks, and retail chains.</p>
-        </div>
-      </div>
+  <section class="why-grid">
+    <div class="why-card">
+      <img src="guard1.jpg" alt="Veteran-Led Team">
+      <h3>Veteran-Led Team</h3>
+      <p>Founded by Army veteran Lt. Col. H.C. Sharma. Led by experienced professionals with real-world security backgrounds.</p>
+    </div>
+    <div class="why-card">
+      <img src="guard2.jpg" alt="Certified & Compliant">
+      <h3>Certified & Compliant</h3>
+      <p>PSARA certified in Delhi & Uttar Pradesh. PF, ESIC, GST, and Udyam registered. Transparent legal compliance.</p>
+    </div>
+    <div class="why-card">
+      <img src="guard3.jpg" alt="24/7 Deployment">
+      <h3>24/7 Deployment</h3>
+      <p>Rapid deployment of trained guards for emergencies or round-the-clock coverage as per your needs.</p>
+    </div>
+    <div class="why-card">
+      <img src="guard4.jpg" alt="Trusted Across Industries">
+      <h3>Trusted Across Industries</h3>
+      <p>We serve manufacturing plants, educational campuses, logistics hubs, retail outlets, and more.</p>
+    </div>
+    <div class="why-card">
+      <img src="guard5.jpg" alt="Trained Professionals">
+      <h3>Trained Professionals</h3>
+      <p>Our personnel are vetted, uniformed, and trained in SOPs, patrols, visitor handling, and emergency procedures.</p>
+    </div>
+    <div class="why-card">
+      <img src="guard6.JPG" alt="Tech-Driven Approach">
+      <h3>Tech-Driven Approach</h3>
+      <p>Use of surveillance systems, digital patrol logs, and reporting tools for real-time tracking and transparency.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Bravado Security & Solutions. All rights reserved.
+    &copy; 2025 Bravado Security and Solutions. All rights reserved.
   </footer>
-
 </body>
 </html>
+
