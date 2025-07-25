@@ -12,15 +12,48 @@
       background: #fff;
       color: #1a1a1a;
     }
+
+    nav {
+      background-color: #0b1c2c;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #88c0ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
     header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 40px 20px 20px;
     }
+
     header h1 {
       font-family: 'Oswald', sans-serif;
       font-size: clamp(32px, 5vw, 42px);
       color: #0b1c2c;
     }
+
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -28,32 +61,48 @@
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
-      align-items: center;
     }
+
     .why-block {
       display: flex;
       flex-direction: row;
       gap: 20px;
       align-items: center;
+      background: #f8f8f8;
+      padding: 16px;
+      border-radius: 12px;
+      transition: 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
+
+    .why-block:hover {
+      background: #e6f2ff;
+      box-shadow: 0 4px 14px rgba(0, 70, 140, 0.2);
+      transform: translateY(-2px);
+    }
+
     .why-block img {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
+      height: auto;
       border-radius: 12px;
       object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
     }
+
     .why-text h3 {
       font-family: 'Oswald', sans-serif;
       font-size: 24px;
       margin-bottom: 10px;
       color: #0b1c2c;
     }
+
     .why-text p {
       font-size: 16px;
       line-height: 1.6;
       color: #333;
     }
+
     @media (max-width: 768px) {
       .why-grid {
         grid-template-columns: 1fr;
@@ -66,6 +115,7 @@
         max-width: 100%;
       }
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -75,6 +125,16 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="why.html">Why Us</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
   <header>
     <h1>Why Choose Bravado</h1>
@@ -122,4 +182,3 @@
 
 </body>
 </html>
-
