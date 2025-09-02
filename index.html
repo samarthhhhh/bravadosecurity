@@ -6,25 +6,45 @@
   <title>Bravado Security and Solutions</title>
   <meta name="description" content="Bravado Security and Surveillance – PSARA certified, MSME registered provider of trained guards, armed personnel, and industrial security solutions across Delhi NCR.">
   <meta name="keywords" content="security agency, guards, PSARA, Delhi NCR, industrial security, Bravado">
+  <meta name="theme-color" content="#0b1c2c">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Bravado Security and Solutions">
+  <meta property="og:description" content="PSARA certified, MSME registered security services across Delhi NCR.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta name="theme-color" content="#0b1c2c">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Critical image preload -->
+  <link rel="preload" as="image" href="unnamed.jpg" fetchpriority="high">
+
+  <!-- Swiper and styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Navigation -->
   <nav>
     <div class="nav-left">
-      <img src="BSSlogo-2.png" alt="Bravado Logo" class="nav-logo" />
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <img src="BSSlogo-2.png" alt="Bravado Security & Solutions" class="nav-logo" />
+      <button class="hamburger" id="hamburger" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle menu" onclick="toggleMenu()">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-      </div>
+      </button>
     </div>
     <div class="nav-links" id="mobileMenu">
       <a href="#about" onclick="closeMenu()">About</a>
@@ -36,221 +56,258 @@
 
   <!-- Hero / Slideshow -->
   <header>
-    <div class="slideshow">
-      <img src="unnamed.jpg" class="slide show" />
-      <img src="unnamed2.jpg" class="slide" />
-      <img src="unnamed3.jpg" class="slide" />
-      <img src="unnamed4.jpg" class="slide" />
-      <img src="unnamed5.jpg" class="slide" />
+    <div class="slideshow" id="heroSlides">
+      <img src="unnamed.jpg" class="slide show" alt="Security operations" loading="eager" decoding="async" />
+      <img src="unnamed2.jpg" class="slide" alt="Industrial site security" loading="lazy" decoding="async" />
+      <img src="unnamed3.jpg" class="slide" alt="CCTV monitoring" loading="lazy" decoding="async" />
+      <img src="unnamed4.jpg" class="slide" alt="Professional guarding" loading="lazy" decoding="async" />
+      <img src="unnamed5.jpg" class="slide" alt="Perimeter protection" loading="lazy" decoding="async" />
     </div>
-    <img src="logo.png" alt="Bravado Logo" />
+    <img class="hero-logo" src="logo.png" alt="Bravado Logo" loading="lazy" decoding="async" />
   </header>
 
-  <!-- Stats + Badges -->
-  <section id="stats" class="trust-combo">
-    <span><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified"></span>
-    <span><img src="MSME.jpeg" alt="MSME Registered" title="MSME Registered"></span>
-    <div class="stat-box">
-      <div class="counter" data-target="100">0</div>
-      <p>Trusted Clients</p>
-    </div>
-    <div class="stat-box">
-      <div class="counter" data-target="500">0</div>
-      <p>Guards Deployed</p>
-    </div>
-    <div class="stat-box">
-      <div class="counter" data-target="40">0</div>
-      <p>Years of Experience</p>
-    </div>
-  </section>
+  <main id="main">
+    <!-- Stats + Badges -->
+    <section id="stats" class="trust-combo">
+      <span class="badge"><img src="psara-logo.jpg" alt="PSARA Certified" title="PSARA Certified" loading="lazy" decoding="async"></span>
+      <span class="badge"><img src="MSME.jpeg" alt="MSME Registered" title="MSME Registered" loading="lazy" decoding="async"></span>
+      <div class="stat-box">
+        <div class="counter" data-target="100">0</div>
+        <p>Trusted Clients</p>
+      </div>
+      <div class="stat-box">
+        <div class="counter" data-target="500">0</div>
+        <p>Guards Deployed</p>
+      </div>
+      <div class="stat-box">
+        <div class="counter" data-target="40">0</div>
+        <p>Years of Experience</p>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about-wrapper">
-      <div class="about-image">
-        <img src="founder.jpeg" alt="Lt. Col. H.C. Sharma" />
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-h2">
+      <div class="about-wrapper">
+        <div class="about-image">
+          <img src="founder.jpeg" alt="Lt. Col. H.C. Sharma" loading="lazy" decoding="async" />
+        </div>
+        <div class="about-content">
+          <h2 id="about-h2">Our Legacy & Mission</h2>
+          <p><strong>Bravado Security & Solutions</strong> was founded by the late <strong>Lt. Col. H.C. Sharma</strong>, a decorated Army veteran with an unwavering commitment to discipline, leadership, and national service.</p>
+          <p>Following a distinguished career in the Indian Army, he established Bravado Security with the vision of delivering security services built on ethics, vigilance, and military-grade professionalism.</p>
+          <p>His values remain the cornerstone of everything we do — a legacy that continues to inspire our operations to this day.</p>
+        </div>
       </div>
-      <div class="about-content">
-        <h2>Our Legacy & Mission</h2>
-<p><strong>Bravado Security & Solutions</strong> was founded by the late <strong>Lt. Col. H.C. Sharma</strong>, a decorated Army veteran with an unwavering commitment to discipline, leadership, and national service.</p>
-<p>Following a distinguished career in the Indian Army, he established Bravado Security with the vision of delivering security services built on ethics, vigilance, and military-grade professionalism.</p>
-<p>His values remain the cornerstone of everything we do — a legacy that continues to inspire our operations to this day.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Security Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="security-guard.png" class="service-icon" alt="Security Guard Icon" />
-        <h3>Security Guard</h3>
-        <p>Trained personnel to protect property, people, and assets.</p>
+    <!-- Services Section -->
+    <section id="services" aria-labelledby="services-h2">
+      <h2 id="services-h2">Our Security Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <img src="security-guard.png" class="service-icon" alt="Security Guard" loading="lazy" decoding="async" />
+          <h3>Security Guard</h3>
+          <p>Trained personnel to protect property, people, and assets.</p>
+        </div>
+        <div class="service-card">
+          <img src="security-supervisor.png" class="service-icon" alt="Security Supervisor" loading="lazy" decoding="async" />
+          <h3>Security Supervisor</h3>
+          <p>Oversees security staff & responds to incidents promptly.</p>
+        </div>
+        <div class="service-card">
+          <img src="armed-pso.png" class="service-icon" alt="Armed PSO" loading="lazy" decoding="async" />
+          <h3>Armed PSO</h3>
+          <p>Close-protection for VIPs and high-risk individuals.</p>
+        </div>
+        <div class="service-card">
+          <img src="surveillance-room.png" class="service-icon" alt="Surveillance Room" loading="lazy" decoding="async" />
+          <h3>Surveillance Room</h3>
+          <p>24/7 CCTV monitoring and incident response coordination.</p>
+        </div>
+        <div class="service-card">
+          <img src="gunman.png" class="service-icon" alt="Gunman" loading="lazy" decoding="async" />
+          <h3>Gunman</h3>
+          <p>Armed personnel for high-risk environments and protection.</p>
+        </div>
+        <div class="service-card">
+          <img src="fire-safety-expert.png" class="service-icon" alt="Fire Safety Expert" loading="lazy" decoding="async" />
+          <h3>Fire Safety Expert</h3>
+          <p>Prevention, detection & response to fire hazards.</p>
+        </div>
       </div>
-      <div class="service-card">
-        <img src="security-supervisor.png" class="service-icon" alt="Security Supervisor Icon" />
-        <h3>Security Supervisor</h3>
-        <p>Oversees security staff & responds to incidents promptly.</p>
-      </div>
-      <div class="service-card">
-        <img src="armed-pso.png" class="service-icon" alt="Armed PSO Icon" />
-        <h3>Armed PSO</h3>
-        <p>Close-protection for VIPs and high-risk individuals.</p>
-      </div>
-      <div class="service-card">
-        <img src="surveillance-room.png" class="service-icon" alt="Surveillance Room Icon" />
-        <h3>Surveillance Room</h3>
-        <p>24/7 CCTV monitoring and incident response coordination.</p>
-      </div>
-      <div class="service-card">
-        <img src="gunman.png" class="service-icon" alt="Gunman Icon" />
-        <h3>Gunman</h3>
-        <p>Armed personnel for high-risk environments and protection.</p>
-      </div>
-      <div class="service-card">
-        <img src="fire-safety-expert.png" class="service-icon" alt="Fire Safety Expert Icon" />
-        <h3>Fire Safety Expert</h3>
-        <p>Prevention, detection & response to fire hazards.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Clients Carousel -->
-  <section id="clients">
-    <h2>Our Clients</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="https://www.adityaauto.com" target="_blank"><img src="adityalogo.png" alt="Aditya Auto"></a></div>
-        <div class="swiper-slide"><a href="https://www.halonix.co.in" target="_blank"><img src="Logohalonix.png" alt="Halonix"></a></div>
-        <div class="swiper-slide"><a href="https://ramanujancollege.ac.in" target="_blank"><img src="logoramanujancollege.jpeg" alt="Ramanujan College"></a></div>
-        <div class="swiper-slide"><a href="https://www.ecoware.in" target="_blank"><img src="LOGOECOWARE.png" alt="Ecoware"></a></div>
-        <div class="swiper-slide"><a href="https://www.syrotech.com" target="_blank"><img src="LOGOSYROTECH.png" alt="Syrotech"></a></div>
-        <div class="swiper-slide"><a href="https://www.akggroupindia.com/contact-us" target="_blank"><img src="logoAKG.jpg" alt="AKG Group"></a></div>
-        <div class="swiper-slide"><a href="https://radiantiml.com" target="_blank"><img src="LOGORADIANT.png" alt="Radiant IML"></a></div>
-        <div class="swiper-slide"><a href="https://suprajit.com" target="_blank"><img src="suprajit logo.png" alt="Suprajit Group"></a></div>
+    <!-- Clients Carousel -->
+    <section id="clients" aria-labelledby="clients-h2">
+      <h2 id="clients-h2">Our Clients</h2>
+      <div class="swiper mySwiper" aria-label="Client logos carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="https://www.adityaauto.com" target="_blank" rel="noopener"><img src="adityalogo.png" alt="Aditya Auto"></a></div>
+          <div class="swiper-slide"><a href="https://www.halonix.co.in" target="_blank" rel="noopener"><img src="Logohalonix.png" alt="Halonix"></a></div>
+          <div class="swiper-slide"><a href="https://ramanujancollege.ac.in" target="_blank" rel="noopener"><img src="logoramanujancollege.jpeg" alt="Ramanujan College"></a></div>
+          <div class="swiper-slide"><a href="https://www.ecoware.in" target="_blank" rel="noopener"><img src="LOGOECOWARE.png" alt="Ecoware"></a></div>
+          <div class="swiper-slide"><a href="https://www.syrotech.com" target="_blank" rel="noopener"><img src="LOGOSYROTECH.png" alt="Syrotech"></a></div>
+          <div class="swiper-slide"><a href="https://www.akggroupindia.com/contact-us" target="_blank" rel="noopener"><img src="logoAKG.jpg" alt="AKG Group"></a></div>
+          <div class="swiper-slide"><a href="https://radiantiml.com" target="_blank" rel="noopener"><img src="LOGORADIANT.png" alt="Radiant IML"></a></div>
+          <div class="swiper-slide"><a href="https://suprajit.com" target="_blank" rel="noopener"><img src="suprajit logo.png" alt="Suprajit Group"></a></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <h2>What Clients Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p class="quote">“Professional, punctual, and highly reliable. Our facility is secure 24/7 thanks to Bravado.”</p>
-        <p class="name">– Facility Manager, Halonix</p>
+    <!-- Testimonials -->
+    <section id="testimonials" aria-labelledby="testimonials-h2">
+      <h2 id="testimonials-h2">What Clients Say</h2>
+      <div class="testimonial-grid">
+        <figure class="testimonial-card">
+          <blockquote class="quote">“Professional, punctual, and highly reliable. Our facility is secure 24/7 thanks to Bravado.”</blockquote>
+          <figcaption class="name">Facility Manager, Halonix</figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote class="quote">“From fire drills to perimeter checks, their team is sharp and responsive.”</blockquote>
+          <figcaption class="name">Principal, Ramanujan College</figcaption>
+        </figure>
+        <figure class="testimonial-card">
+          <blockquote class="quote">“Quick deployment, disciplined guards, and consistent reporting. Bravado has been a strong partner.”</blockquote>
+          <figcaption class="name">Head of Admin, Syrotech</figcaption>
+        </figure>
       </div>
-      <div class="testimonial-card">
-        <p class="quote">“From fire drills to perimeter checks, their team is sharp and responsive.”</p>
-        <p class="name">– Principal, Ramanujan College</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-h2">
+      <div class="contact-wrapper">
+        <div class="content">
+          <h2 id="contact-h2">Contact Us</h2>
+          <p><strong>Email:</strong> <a href="mailto:bravado745@yahoo.com">bravado745@yahoo.com</a></p>
+          <p><strong>Phone:</strong> +91 99900 92994</p>
+          <p><strong>Address:</strong> D-20, Sector 7, Noida, Uttar Pradesh – 201301</p>
+          <a href="mailto:bravado745@yahoo.com" class="cta-btn">Send Inquiry</a>
+        </div>
+
+        <div class="map-box">
+          <iframe
+            title="Map to Bravado Security & Solutions"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.3167143386736!2d77.31546187575583!3d28.595999675684705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce50735477bb7%3A0xe9758b38fa22e771!2sBravado%20Security%20Solutions!5e1!3m2!1sen!2sin!4v1753437558762!5m2!1sen!2sin"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
-      <div class="testimonial-card">
-        <p class="quote">“Quick deployment, disciplined guards, and consistent reporting. Bravado has been a strong partner.”</p>
-        <p class="name">– Head of Admin, Syrotech</p>
-      </div>
-    </div>
-  </section>
-
- <!-- Contact -->
-<section id="contact">
-  <div class="contact-wrapper">
-    <div class="content">
-      <h2>Contact Us</h2>
-      <p><strong>Email:</strong> <a href="mailto:bravado745@yahoo.com">bravado745@yahoo.com</a></p>
-      <p><strong>Phone:</strong> +91 99900 92994</p>
-      <p><strong>Address:</strong> D-20, Sector 7, Noida, Uttar Pradesh – 201301</p>
-      <a href="mailto:bravado745@yahoo.com" class="cta-btn">Send Inquiry</a>
-    </div>
-
-
-<div class="map-box">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.3167143386736!2d77.31546187575583!3d28.595999675684705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce50735477bb7%3A0xe9758b38fa22e771!2sBravado%20Security%20Solutions!5e1!3m2!1sen!2sin!4v1753437558762!5m2!1sen!2sin"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
-
-  </div>
-</section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Bravado Security and Solutions. All rights reserved.
   </footer>
 
+  <!-- JSON-LD for LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SecurityService",
+    "name":"Bravado Security & Solutions",
+    "image":"logo.png",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"D-20, Sector 7",
+      "addressLocality":"Noida",
+      "addressRegion":"UP",
+      "postalCode":"201301",
+      "addressCountry":"IN"
+    },
+    "areaServed":"Delhi NCR",
+    "telephone":"+91 99900 92994",
+    "email":"bravado745@yahoo.com",
+    "url":"https://bravadosecurity.co.in"
+  }
+  </script>
+
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.mySwiper', {
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 3,
-      spaceBetween: 16,
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 }
-      }
-    });
+    // Respect reduced motion
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const slides = document.querySelectorAll('.slide');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('show');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('show');
-    }, 5000);
-
-    const counters = document.querySelectorAll('.counter');
-    let hasAnimated = false;
-
-    function animateCounters() {
-      if (hasAnimated) return;
-      if (!isInViewport(counters[0])) return;
-
-      counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const current = +counter.innerText;
-          const increment = target / 40;
-
-          if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCount, 50);
-          } else {
-            counter.innerText = target + '+';
-          }
-        };
-        updateCount();
+    document.addEventListener('DOMContentLoaded', () => {
+      // Swiper init
+      const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        autoplay: reduceMotion ? false : { delay: 2500, disableOnInteraction: false },
+        slidesPerView: 3,
+        spaceBetween: 16,
+        a11y: true,
+        keyboard: { enabled: true },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 }
+        }
       });
 
-      hasAnimated = true;
-    }
+      // Start slideshow when header is in view
+      const slides = document.querySelectorAll('.slide');
+      let current = 0;
+      const startSlideshow = () => {
+        if (reduceMotion || slides.length === 0) return;
+        setInterval(() => {
+          slides[current].classList.remove('show');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('show');
+        }, 5000);
+      };
 
-    function isInViewport(elem) {
-      const rect = elem.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom >= 0;
-    }
+      const header = document.querySelector('header');
+      const io = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          startSlideshow();
+          io.disconnect();
+        }
+      });
+      if (header) io.observe(header);
 
-    window.addEventListener('scroll', animateCounters);
+      // Counter animation when visible
+      const counters = document.querySelectorAll('.counter');
+      let countersAnimated = false;
+      function animateCounters() {
+        if (countersAnimated || reduceMotion || counters.length === 0) return;
+        if (!isInViewport(counters[0])) return;
 
+        counters.forEach(counter => {
+          const target = +counter.dataset.target;
+          let value = 0;
+          const step = Math.max(1, Math.ceil(target / 40));
+          const tick = () => {
+            value = Math.min(target, value + step);
+            counter.textContent = value + (value === target ? '+' : '');
+            if (value < target) requestAnimationFrame(tick);
+          };
+          tick();
+        });
+        countersAnimated = true;
+      }
+      function isInViewport(elem) {
+        const rect = elem.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom >= 0;
+      }
+      window.addEventListener('scroll', animateCounters, { passive: true });
+      animateCounters();
+    });
+
+    // Mobile nav
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
       const icon = document.getElementById('hamburger');
-
-      menu.classList.toggle('show');
-      icon.classList.toggle('active');
+      const open = menu.classList.toggle('show');
+      icon.classList.toggle('active', open);
+      icon.setAttribute('aria-expanded', String(open));
     }
-
     function closeMenu() {
-      document.getElementById('mobileMenu').classList.remove('show');
-      document.getElementById('hamburger').classList.remove('active');
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('hamburger');
+      menu.classList.remove('show');
+      icon.classList.remove('active');
+      icon.setAttribute('aria-expanded', 'false');
     }
   </script>
 </body>
