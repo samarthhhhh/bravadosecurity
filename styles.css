@@ -68,6 +68,7 @@ nav {
 }
 
 @media (max-width: 600px) {
+
   nav {
     flex-direction: column;
     align-items: center;
@@ -124,6 +125,7 @@ nav {
       opacity: 0;
       transform: translateY(-10px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -144,8 +146,10 @@ header {
 
 .slideshow {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
@@ -379,6 +383,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   .about-wrapper {
     flex-direction: column;
     align-items: flex-start;
@@ -436,12 +441,22 @@ footer {
   border-radius: 12px;
 }
 
-/* Leadership Section */
+/* =========================================
+   LEADERSHIP SECTION
+========================================= */
 
 .leadership-section {
   background: #081321;
   padding: 100px 8%;
   color: #fff;
+  max-width: 100%;
+}
+
+.leadership-section h2,
+.leadership-section h3,
+.leadership-section h4,
+.leadership-section h5 {
+  color: #ffffff;
 }
 
 .section-header {
@@ -454,13 +469,15 @@ footer {
   font-size: 0.85rem;
   display: inline-block;
   margin-bottom: 16px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .section-header h2 {
-  font-size: 4rem;
+  font-size: clamp(42px, 7vw, 78px);
   line-height: 1.05;
   font-weight: 800;
   max-width: 900px;
+  text-align: left;
 }
 
 .section-header h2 span {
@@ -507,154 +524,4 @@ footer {
   background: rgba(255,255,255,0.02);
   position: sticky;
   top: 120px;
-}
-
-.command-icon {
-  color: #d4af37;
-  font-size: 3rem;
-  margin-bottom: 30px;
-}
-
-.command-card h3 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #d4af37;
-  font-size: 0.9rem;
-  margin-bottom: 40px;
-}
-
-.command-person h4 {
-  font-size: 1.7rem;
-  margin-bottom: 10px;
-}
-
-.command-person p {
-  color: #9ba7b6;
-  line-height: 1.6;
-}
-
-.divider {
-  height: 1px;
-  background: rgba(255,255,255,0.1);
-  margin: 30px 0;
-}
-
-.command-link {
-  display: inline-block;
-  margin-top: 35px;
-  color: #d4af37;
-  text-decoration: none;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-.leader-card {
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.02);
-  padding: 40px;
-}
-
-.leader-top {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-}
-
-.leader-badge {
-  width: 120px;
-  height: 120px;
-  border: 1px solid #d4af37;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: 800;
-  color: #d4af37;
-  flex-shrink: 0;
-}
-
-.designation {
-  color: #d4af37;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-}
-
-.leader-card h3 {
-  font-size: 3rem;
-  margin: 10px 0 20px;
-}
-
-.tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag-group span {
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 10px 14px;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
-
-.leader-desc {
-  margin-top: 40px;
-  color: #b8c0cc;
-  line-height: 1.9;
-  font-size: 1.05rem;
-}
-
-.leader-divider {
-  height: 1px;
-  background: rgba(255,255,255,0.1);
-  margin: 40px 0;
-}
-
-.expertise h5 {
-  color: #d4af37;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-}
-
-.expertise ul {
-  list-style: none;
-  padding: 0;
-}
-
-.expertise li {
-  margin-bottom: 14px;
-  color: #e8e8e8;
-}
-
-@media(max-width: 991px){
-
-  .leadership-top,
-  .leadership-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-header h2 {
-    font-size: 2.6rem;
-  }
-
-  .leader-top {
-    flex-direction: column;
-  }
-
-  .leader-card h3 {
-    font-size: 2rem;
-  }
-
-  .leader-badge {
-    width: 90px;
-    height: 90px;
-    font-size: 2rem;
-  }
-
 }
