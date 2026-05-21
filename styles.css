@@ -7,10 +7,13 @@ body {
   background-color: #fff;
   color: #1a1a1a;
 }
-
-h1, h2, h3, .nav-links a {
+h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
-  color: #0b1c2c;
+}
+
+.nav-links a {
+  font-family: 'Oswald', sans-serif;
+  color: #88c0ff;
 }
 
 h2 {
