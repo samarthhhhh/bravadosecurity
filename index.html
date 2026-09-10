@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hero.css?v=1">
 </head>
 <body>
   <!-- Navigation -->
@@ -36,7 +37,7 @@
   </nav>
 
   <!-- Hero / Slideshow -->
-  <header>
+  <header class="home-hero">
     <div class="slideshow">
       <img src="unnamed.jpg" class="slide show" />
       <img src="unnamed2.jpg" class="slide" />
@@ -44,7 +45,15 @@
       <img src="unnamed4.jpg" class="slide" />
       <img src="unnamed5.jpg" class="slide" />
     </div>
-    <img src="logo.png" alt="Bravado Logo" />
+    <div class="hero-content">
+      <img src="logo.png" alt="Bravado Logo" class="hero-logo" />
+      <h1>Professional Security Services<br>Across Delhi NCR</h1>
+      <p>Trained guards, armed protection and surveillance for your people and premises.</p>
+      <div class="hero-actions">
+        <a class="hero-button" href="mailto:bravado745@yahoo.com?subject=Security%20services%20quote%20request&amp;body=Hello%20Bravado%20team%2C%0A%0AI%20would%20like%20a%20quote%20for%20security%20services.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ASite%20location%3A%0AService%20required%3A%0APreferred%20start%20date%3A%0A%0AThank%20you.">Request a Quote</a>
+        <a class="hero-button hero-button-outline" href="tel:+919682093126">Call Us</a>
+      </div>
+    </div>
   </header>
 
   <!-- Stats + Badges -->
@@ -83,14 +92,14 @@
   <!-- Leadership Section -->
 <section id="leadership" class="leadership-section">
   <div class="section-header">
-    <span class="mini-title">THE BRAVADO COMMAND</span>
-    <h2>Two decades of foresight.<br><span>Zero compromise on compliance.</span></h2>
+    <span class="mini-title">OUR MANAGEMENT TEAM</span>
+    <h2>40 years of experience.<br><span>Zero compromise on compliance.</span></h2>
   </div>
 
   <div class="leadership-top">
     <div class="leadership-text">
       <p>
-        Bravado complies with every Government Act and Rule for operating a Security Agency in India — including PSARA 2005 — and operates under the leadership of professionals with deep roots in the Armed Forces and corporate security management.
+        With 40 years of organisational experience, Bravado is built on foresight, professionalism and reliability. Our management team combines Armed Forces experience with expertise in security operations and client service.
       </p>
 
       <ul class="compliance-list">
@@ -108,7 +117,7 @@
 
       <div class="command-person">
         <h4>Sanjeev Sharma</h4>
-        <p>Founder · B.Com, PGDBA · 20+ yrs Security & Corporate Marketing</p>
+        <p>B.Com, PGDBA · Two decades in security · 7 years in corporate marketing</p>
       </div>
 
       <div class="divider"></div>
@@ -118,13 +127,26 @@
         <p>General Manager · Ex-Defense · Surveillance & Fire Protection Specialist</p>
       </div>
 
-       <a href="#leadership-cards" class="command-link">
-        Meet The Command →
-      </a>
+      <a href="#leadership-cards" class="command-link">Meet The Command →</a>
     </div>
   </div>
 
-  <div id="leadership-cards" class="leadership-grid">
+  <div id="leadership-cards" class="management-profiles">
+    <article class="management-profile">
+      <h3>Sanjeev Sharma</h3>
+      <p class="management-role">B.Com, PGDBA</p>
+      <p>Sanjeev Sharma brings seven years of corporate marketing experience and two decades in the security industry. He has built a team of committed professionals focused on dependable service, strong client relationships and understanding each client’s security needs.</p>
+      <p>Alongside his work in marketing and security, he is a motivational speaker and meditation guide. His approach to leadership emphasises personal development, teamwork and a sense of responsibility.</p>
+    </article>
+    <article class="management-profile">
+      <h3>Sub. (Retd) Kartar Singh</h3>
+      <p class="management-role">General Manager · Former Armed Forces professional</p>
+      <p>Kartar Singh brings extensive experience in security management, electronic security, surveillance, fire protection and allied services. His Armed Forces background is complemented by practical knowledge gained through working with organisations in the security sector.</p>
+      <p>He combines operational expertise with strong public relations and an empathetic approach to people management, supporting both the teams on the ground and the clients they serve.</p>
+    </article>
+  </div>
+  <p class="management-compliance">Bravado complies with the government Acts, rules and regulations applicable to operating a security agency, including the Private Security Agencies (Regulation) Act, 2005 (PSARA). This commitment supports consistent standards across our services.</p>
+</section>
 
   <!-- Services Section -->
   <section id="services">
@@ -213,7 +235,7 @@
     <div class="content">
       <h2>Contact Us</h2>
       <p><strong>Email:</strong> <a href="mailto:bravado745@yahoo.com">bravado745@yahoo.com</a></p>
-      <p><strong>Phone:</strong> +91 99900 92994</p>
+      <p><a href="tel:+919682093126">Call Us</a></p>
       <p><strong>Address:</strong> D-20, Sector 7, Noida, Uttar Pradesh – 201301</p>
       <a href="mailto:bravado745@yahoo.com" class="cta-btn">Send Inquiry</a>
     </div>
